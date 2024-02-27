@@ -1,8 +1,6 @@
-import React from 'react'
-
 const Aside = () => {
   return (
-    <div className='hidden'>Aside</div>
+    <div className='hidden lg:block'>Aside</div>
   )
 }
 
