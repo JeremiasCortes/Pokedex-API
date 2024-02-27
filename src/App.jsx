@@ -7,7 +7,7 @@ function App() {
     <section>
       <main className='max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 h-screen'>
         <Pokemones></Pokemones>
-        <Aside></Aside>
+        <Aside></Aside>a
       </main>
     </section>
   )
