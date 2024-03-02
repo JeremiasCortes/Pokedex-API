@@ -9,7 +9,7 @@ const Pokemones = () => {
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=10")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=898")
       .then(({ data }) => setTodosLosPokemons(data.results))
       .catch((error) => console.log(error));
   }, []);
