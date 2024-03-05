@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { colorsByType } from "../constantes/pokemonColores";
 
-export const PokemonPreview = ({ pokemonURL }) => {
+export const PokemonPreview = ({ pokemonURL, onClick }) => {
   const [pokemon, setPokemon] = useState(null);
 
   useEffect(() => {
@@ -14,6 +14,7 @@ export const PokemonPreview = ({ pokemonURL }) => {
 
   return (
     <article
+      onClick={onClick}
       className="text-center bg-white rounded-[30px] relative 
     font-semibold capitalize pb-2 pb-4 shadow-lg shadow-slate-800/10 
     border-2 border-transparent hover:border-slate-200 cursor-pointer
@@ -33,8 +34,11 @@ export const PokemonPreview = ({ pokemonURL }) => {
       <h4 className="font-Honk text-xl">{pokemon?.name}</h4>
       <ul className="flex gap-2 justify-center">
         {pokemon?.types.map((type) => (
-          <li className={`p-1 rounded-md px-2
-           text-white text-sm ${colorsByType[type.type.name]}`} key={type.type.name}>
+          <li
+            className={`p-1 rounded-md px-2
+           text-white text-sm ${colorsByType[type.type.name]}`}
+            key={type.type.name}
+          >
             {type.type.name}
           </li>
         ))}

@@ -36,8 +36,8 @@ const Pokemones = () => {
   }, []);
 
   useEffect(() => {
-    if (isVisible){
     const maximoPokemons = pokemonByName.length;
+    if (isVisible && maximoPokemons != 0){
     const newLimit = limite + INCREMENTO_DEL_LIMITE;
     newLimit > maximoPokemons ? setLimite(maximoPokemons): setLimite(newLimit)
     }
@@ -59,7 +59,7 @@ const Pokemones = () => {
             name="pokemonName"
             onChange={handleChangePokemonName}
           ></input>
-          <button className="bg-red-500 p-2 rounded-xl shadow-lg shadow-red-500/50 hover:bg-red-400 transition-colors">
+          <button type="button" className="bg-red-500 p-2 rounded-xl shadow-lg shadow-red-500/50 hover:bg-red-400 transition-colors">
             <IconSearch color="white" stroke={3}/>
           </button>
         </div>
