@@ -66,7 +66,7 @@ const Pokemones = () => {
       </form>
       <PokemonList pokemons={pokemonByName.slice(0, limite)} />
 
-      {/*Objeto de referencia como un ubservador*/}
+      {/*Objeto de referencia como un observador*/}
       <span ref={targetObserver}></span>
     </section>
   );
